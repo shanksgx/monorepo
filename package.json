@@ -1,0 +1,22 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:arco": "pnpm -F arco-app start",
+    "build:arco": "pnpm -F arco-app build"
+  },
+  "keywords": [
+    "arco",
+    "monorepo"
+  ],
+  "author": "goduer",
+  "license": "ISC",
+  "dependencies": {
+    "@arco-design/web-react": "^2.41.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0"
+  }
+}
