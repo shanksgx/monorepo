@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/.eslintcache
 .eslintcache
 
 # testing
@@ -14,10 +15,8 @@
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.dev
+.env.test
 
 npm-debug.log*
 yarn-debug.log*
