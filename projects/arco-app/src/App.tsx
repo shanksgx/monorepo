@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import { Button } from '@arco-design/web-react'
+import { IconSync } from '@arco-design/web-react/icon'
 import '@/global.less'
 
 const App: React.FC = () => {
@@ -11,7 +12,9 @@ const App: React.FC = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Button type="primary">hello, arco!</Button>
+        <Button type="primary" disabled icon={<IconSync spin />}>
+          hello, arco!
+        </Button>
       </header>
     </div>
   )
