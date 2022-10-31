@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start:arco": "pnpm -F arco-app start",
-    "build:arco": "pnpm -F arco-app build"
+    "build:arco": "pnpm -F arco-app build",
+    "prepare": "husky install"
   },
   "keywords": [
     "arco",
-    "monorepo"
+    "monorepos"
   ],
   "author": "goduer",
   "license": "ISC",
@@ -17,6 +18,6 @@
     "@arco-design/web-react": "^2.41.0"
   },
   "devDependencies": {
-    "eslint": "^8.26.0"
+    "husky": "^8.0.1"
   }
 }

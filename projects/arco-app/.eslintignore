@@ -1,0 +1,6 @@
+craco.config.js
+public
+dist
+mock
+.stylelintrc.js
+.prettierrc.js
