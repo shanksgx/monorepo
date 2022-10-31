@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* craco.config.js */
 const setting = require('./src/setting/webpackSetting.json')
 const path = require('path')
-const resolve = dir => path.resolve(__dirname, dir)
+const resolve = (dir) => path.resolve(__dirname, dir)
 const CracoLessPlugin = require('craco-less')
 
 module.exports = {
