@@ -17,8 +17,8 @@
     "typescript": "^4.8.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
+    "start": "env-cmd -f .env.dev craco start",
+    "build": "env-cmd -f .env.test craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint --cache --fix --quiet --max-warnings 200 src --ext tsx,ts,js",
