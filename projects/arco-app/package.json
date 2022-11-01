@@ -1,6 +1,6 @@
 {
   "name": "arco-app",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@arco-design/web-react": "^2.41.0",
