@@ -28,7 +28,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,js,json,md}\"",
     "lint:style": "stylelint \"src/**/*.{css,less}\" --fix  --custom-syntax postcss-less"
   },
-  "cracoConfig": "scripts/craco.config.js",
+  "cracoConfig": "config/craco.config.js",
   "eslintConfig": {
     "extends": [
       "react-app",
