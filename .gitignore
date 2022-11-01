@@ -5,6 +5,8 @@
 
 # testing
 /coverage
+/.eslintcache
+.eslintcache
 
 # production
 /build
