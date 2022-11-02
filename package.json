@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:components": "pnpm -F react-arco-components dev",
+    "build:components": "pnpm -F react-arco-components build",
     "start:arco": "pnpm -F arco-app start",
     "build:arco": "pnpm -F arco-app build",
     "lint": "pnpm -F arco-app lint",
