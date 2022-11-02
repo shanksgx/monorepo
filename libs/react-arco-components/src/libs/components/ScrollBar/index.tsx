@@ -4,7 +4,7 @@ import { Scrollbars } from 'rc-scrollbars'
 const ScrolBar: React.FC<{
   autoHide?: boolean,
   content: React.ReactNode,
-  barStyle: CSSProperties
+  barStyle?: CSSProperties
 }> = ({
   autoHide = false,
   content,

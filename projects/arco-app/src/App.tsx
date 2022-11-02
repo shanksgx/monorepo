@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from './logo.svg'
-import { Button, Typography } from '@arco-design/web-react'
-import { IconSync } from '@arco-design/web-react/icon'
+import { Typography } from '@arco-design/web-react'
 import { unstable_HistoryRouter as Router, useRoutes } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import routes from '@/router/routes'
@@ -36,9 +35,6 @@ const App: React.FC = () => {
         >
           {mockText}
         </Typography.Paragraph>
-        <Button type="primary" size={'large'} disabled icon={<IconSync spin />}>
-          hello, arco!
-        </Button>
         <Router history={history}>
           <RouterConfig />
         </Router>

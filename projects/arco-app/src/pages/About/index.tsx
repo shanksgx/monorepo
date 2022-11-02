@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Typography } from '@arco-design/web-react'
+import { Typography, Divider } from '@arco-design/web-react'
 import NProgress from 'nprogress'
-import { ScrollBar } from 'react-arco-components'
+import { ScrollBar, CustomButton } from 'react-arco-components'
 import styled from 'styled-components'
 
 const { Title } = Typography
 
 const About: React.FC = () => {
   const [status, setStatus] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false)
 
   useEffect(() => {
     NProgress.start()
@@ -18,11 +19,31 @@ const About: React.FC = () => {
     }, 3000)
   }, [])
 
+  const testIcon = () => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }
+
   return (
     <>
       <Title type="primary" underline>
         about page {status}
       </Title>
+      <CustomButton
+        type="primary"
+        size={'large'}
+        customLoading={loading}
+        text={'Hello, CustomButton'}
+        onClick={testIcon}
+      />
+      <Divider
+        style={{
+          borderBottomWidth: 2,
+          borderBottomStyle: 'dotted'
+        }}
+      />
       <ScrollBar
         autoHide={true}
         barStyle={barStyle}

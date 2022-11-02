@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import { ScrollBar } from './libs/main'
-import { Typography } from '@arco-design/web-react'
+import { ScrollBar, CustomButton } from './libs/main'
+import { Typography, Divider } from '@arco-design/web-react'
 import styled from "styled-components"
 import './App.less'
 
@@ -9,6 +9,14 @@ const { Title } = Typography
 
 function App() {
   const [count, setCount] = useState<number>(0)
+  const [loading, setLoading] = useState<boolean>(false)
+
+  const testIcon = () => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }
 
   return (
     <div className="App">
@@ -32,12 +40,25 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <CustomButton
+        type='primary'
+        size={'large'}
+        customLoading={loading}
+        text={'Hello, CustomButton'}
+        onClick={testIcon}
+      />
+      <Divider
+        style={{
+          borderBottomWidth: 2,
+          borderBottomStyle: 'dotted',
+        }}
+      />
       <ScrollBar
         autoHide={true}
         barStyle={barStyle}
         content={
           <ScrollBox>
-            <Title type="primary" underline heading={5}>This is ScrollBar components...</Title>
+            <Title type="primary" underline heading={6}>This is ScrollBar components...</Title>
           </ScrollBox>
         }
       />
