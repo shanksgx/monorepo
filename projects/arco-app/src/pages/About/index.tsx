@@ -22,7 +22,7 @@ const About: React.FC = () => {
       <Title type="primary" underline>
         about page {status}
       </Title>
-      <ScrollBar />
+      <ScrollBar autoHide={true} />
     </>
   )
 }

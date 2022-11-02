@@ -1,32 +1,34 @@
 import React from "react"
 import { Scrollbars } from 'rc-scrollbars'
-import { Button, Typography } from '@arco-design/web-react'
+import { Typography } from '@arco-design/web-react'
+import styled from "styled-components"
 
 const { Title } = Typography
 
-const ScrolBar: React.FC = () => {
+const ScrolBar: React.FC<{ autoHide?: boolean }> = ({ autoHide = false }) => {
   return (
     <Scrollbars
-      autoHide
-      style={{
-        width: 500,
-        height: 300,
-        border: "1px solid #e8e8e8"
-      }}
+      autoHide={autoHide}
+      style={barStyle}
     >
-      <div
-        style={{
-          width: '510px',
-          height: '350px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
+      <ScrollBox>
         <Title type="primary" underline heading={5}>This is ScrollBar components...</Title>
-      </div>
+      </ScrollBox>
     </Scrollbars>
   )
+}
+
+const ScrollBox = styled.span`
+	width: 510px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+`;
+const barStyle = {
+  width: 500,
+  height: 300,
+  border: "1px solid #181818"
 }
 
 export default ScrolBar
