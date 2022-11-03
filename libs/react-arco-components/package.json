@@ -2,6 +2,7 @@
   "name": "react-arco-components",
   "version": "1.0.3",
   "type": "module",
+  "author": "goduer",
   "publishConfig": {
     "access": "public"
   },
