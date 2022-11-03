@@ -3,9 +3,18 @@
   "version": "1.0.3",
   "type": "module",
   "author": "goduer",
+  "description": "This is an arco ui component",
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanksgx/monorepos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shanksgx/monorepos/issues"
+  },
+  "homepage": "https://github.com/shanksgx/monorepos#readme",
   "files": [
     "dist"
   ],
