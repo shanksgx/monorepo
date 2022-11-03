@@ -1,7 +1,6 @@
 import React from "react"
 import { Button, type ButtonProps } from '@arco-design/web-react'
 import { IconSync } from '@arco-design/web-react/icon'
-import "@arco-design/web-react/dist/css/index.less"
 
 interface ICustomButton extends ButtonProps {
   text: string;
