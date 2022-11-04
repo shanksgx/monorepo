@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "homepage": "https://shanksgx.github.io/arco/",
+  "homepage": "./",
   "scripts": {
     "dev:components": "pnpm -F react-arco-components dev",
     "build:components": "pnpm -F react-arco-components build",
