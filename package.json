@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "homepage": "https://shanksgx.github.io/monorepos/",
+  "homepage": "https://shanksgx.github.io",
   "scripts": {
     "dev:components": "pnpm -F react-arco-components dev",
     "build:components": "pnpm -F react-arco-components build",
@@ -14,7 +14,7 @@
     "lint:style": "pnpm -F arco-app lint:style",
     "prepare": "husky install",
     "predeploy": "pnpm -F arco-app build",
-    "deploy": "gh-pages -d build:arco"
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "arco",
