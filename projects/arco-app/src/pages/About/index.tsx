@@ -29,8 +29,11 @@ const About: React.FC = () => {
   return (
     <>
       <Title type="primary" underline>
-        about page {status}
+        About components page {status}
       </Title>
+      <Typography.Paragraph copyable code>
+        {`import { CustomButton } from "react-arco-components"`}
+      </Typography.Paragraph>
       <CustomButton
         type="primary"
         size={'large'}
@@ -44,6 +47,9 @@ const About: React.FC = () => {
           borderBottomStyle: 'dotted'
         }}
       />
+      <Typography.Paragraph copyable code>
+        {`import { ScrollBar } from "react-arco-components"`}
+      </Typography.Paragraph>
       <ScrollBar
         autoHide={true}
         barStyle={barStyle}
