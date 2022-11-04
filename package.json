@@ -14,7 +14,7 @@
     "lint:style": "pnpm -F arco-app lint:style",
     "prepare": "husky install",
     "predeploy": "pnpm -F arco-app build",
-    "deploy": "gh-pages -d ./project/arco-app/build"
+    "deploy": "gh-pages -d ./projects/arco-app/build"
   },
   "keywords": [
     "arco",
