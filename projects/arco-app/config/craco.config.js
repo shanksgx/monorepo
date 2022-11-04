@@ -4,12 +4,35 @@ const setting = require('../src/setting/webpackSetting.json')
 const path = require('path')
 const resolve = (dir) => path.resolve(__dirname, `../${dir}`)
 const CracoLessPlugin = require('craco-less')
+const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin')
+const WebpackBar = require('webpackbar')
+const CircularDependencyPlugin = require('circular-dependency-plugin')
 
 module.exports = {
   webpack: {
     alias: {
       '@': resolve('src')
-    }
+    },
+    configure: (webpackConfig, { paths }) => {
+      paths.appBuild = 'build'
+      webpackConfig.output = {
+        ...webpackConfig.output,
+        publicPath: process.env.NODE_ENV === 'test' ? './' : '/'
+      }
+      return webpackConfig
+    },
+    plugins: [
+      new WebpackBar({ profile: true }),
+      new CircularDependencyPlugin({
+        exclude: /node_modules/,
+        include: /src/,
+        failOnError: true,
+        allowAsyncCycles: false,
+        cwd: process.cwd()
+      }),
+      // 查看打包的进度
+      new SimpleProgressWebpackPlugin()
+    ]
   },
   plugins: [
     {
@@ -30,5 +53,8 @@ module.exports = {
         }
       }
     }
-  ]
+  ],
+  devServer: {
+    port: 8000
+  }
 }

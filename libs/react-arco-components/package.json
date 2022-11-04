@@ -1,6 +1,6 @@
 {
   "name": "react-arco-components",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "author": "goduer",
   "description": "This is an arco ui component",
@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/shanksgx/monorepos/issues"
   },
-  "homepage": "https://github.com/shanksgx/monorepos#readme",
+  "homepage": "shanksgx.github.io/monorepos/",
   "files": [
     "dist"
   ],

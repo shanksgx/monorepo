@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from './logo.svg'
 import { Typography } from '@arco-design/web-react'
-import { unstable_HistoryRouter as Router, useRoutes } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { HashRouter, useRoutes } from 'react-router-dom'
+// import { createBrowserHistory } from 'history'
 import routes from '@/router/routes'
 import '@/global.less'
 
 const RouterConfig = () => useRoutes(routes)
-const history = createBrowserHistory()
+// const history = createBrowserHistory()
 const { Title } = Typography
 const mockText =
   'This is an arco ui, monorepos, demo based on react. Based on this, we can develop the PC and H5 projects.The project will add cutting-edge front-end web technology according to personal inspiration.'
@@ -35,9 +35,9 @@ const App: React.FC = () => {
         >
           {mockText}
         </Typography.Paragraph>
-        <Router history={history}>
+        <HashRouter>
           <RouterConfig />
-        </Router>
+        </HashRouter>
       </header>
     </div>
   )
