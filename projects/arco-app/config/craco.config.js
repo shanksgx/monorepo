@@ -17,7 +17,7 @@ module.exports = {
       paths.appBuild = 'build'
       webpackConfig.output = {
         ...webpackConfig.output,
-        publicPath: process.env.NODE_ENV === 'test' ? './' : '/'
+        publicPath: process.env.REACT_NODE_ENV === 'test' ? './' : '/'
       }
       return webpackConfig
     },
