@@ -58,7 +58,7 @@ module.exports = {
     port: 8000,
     proxy: {
       '/api-kernel-portal': {
-        target: 'https://www.geeba.com',
+        target: 'https://www.baidu.com',
         changeOrigin: true,
         secure: false,
         xfwd: false

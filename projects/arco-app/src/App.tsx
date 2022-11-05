@@ -18,39 +18,40 @@ const mockTitle = 'Monorepos for React'
 
 const App: React.FC = () => {
   return (
-    <Suspense
-      fallback={
-        <ContentBox>
-          <Spin dot />
-        </ContentBox>
-      }
+    <SWRConfig
+      value={{
+        onError: (error, key) => {
+          console.log('error:', key, error)
+          if (error.status !== 403 && error.status !== 404) {
+            console.error(error)
+            // 我们可以把错误发送给 Sentry，
+            // 或显示一个通知 UI。
+          }
+        },
+        onErrorRetry: (error, key, _, revalidate, { retryCount }) => {
+          console.log(retryCount)
+          // 404 时不重试。
+          if (error.status === 404) return
+
+          // 特定的 key 时不重试。
+          if (key === '/api/user') return
+
+          // 最多重试 10 次。
+          if (retryCount >= 3) return
+
+          // 5秒后重试。
+          // setTimeout(() => revalidate({ retryCount: retryCount }), 5000)
+        }
+      }}
     >
-      <RecoilRoot>
-        <SWRConfig
-          value={{
-            onError: (error, key) => {
-              console.log('error:', key, error)
-              if (error.status !== 403 && error.status !== 404) {
-                // 我们可以把错误发送给 Sentry，
-                // 或显示一个通知 UI。
-              }
-            },
-            onErrorRetry: (error, key, _, revalidate, { retryCount }) => {
-              console.log(retryCount)
-              // 404 时不重试。
-              if (error.status === 404) return
-
-              // 特定的 key 时不重试。
-              if (key === '/api/user') return
-
-              // 最多重试 10 次。
-              if (retryCount >= 3) return
-
-              // 5秒后重试。
-              // setTimeout(() => revalidate({ retryCount: retryCount }), 5000)
-            }
-          }}
-        >
+      <Suspense
+        fallback={
+          <ContentBox>
+            <Spin dot />
+          </ContentBox>
+        }
+      >
+        <RecoilRoot>
           <div className="app">
             <header className="app-header">
               <img src={logo} className="app-logo" alt="logo" />
@@ -76,9 +77,9 @@ const App: React.FC = () => {
               </HashRouter>
             </header>
           </div>
-        </SWRConfig>
-      </RecoilRoot>
-    </Suspense>
+        </RecoilRoot>
+      </Suspense>
+    </SWRConfig>
   )
 }
 
