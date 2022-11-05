@@ -10,17 +10,18 @@ export enum Api {
 }
 
 export const fetcher = async ({ url, data }: Idata) => {
-  console.log('test:', data)
-  const res = await axios.get(url)
-  console.log(res)
-  if (res.data.code !== '0000') {
-    const error = {
-      info: res.data.msg,
-      code: res.data.code
-    }
-    console.error('error:', error)
-    throw error
-  }
+  // console.log('test:', data)
+  // const res = await axios.get(url)
+  // console.log(res)
+  // if (res.data.code !== '0000') {
+  //   const error = {
+  //     info: res.data.msg,
+  //     code: res.data.code
+  //   }
+  //   console.error('error:', error)
+  //   throw error
+  // }
+  // return res.data
 
-  return res.data
+  return true
 }
