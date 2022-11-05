@@ -52,6 +52,7 @@ importers:
       '@types/react': ^18.0.24
       '@types/react-dom': ^18.0.8
       '@types/styled-components': ^5.1.26
+      axios: ^1.1.3
       babel-plugin-import: ^1.13.5
       circular-dependency-plugin: ^5.2.2
       craco-less: ^2.0.0
@@ -84,6 +85,7 @@ importers:
       stylelint-config-standard-vue: ^1.0.0
       stylelint-less: ^1.0.6
       stylelint-order: ^5.0.0
+      swr: ^1.3.0
       typescript: ^4.8.4
       webpackbar: ^5.0.2
     dependencies:
@@ -95,6 +97,7 @@ importers:
       '@types/node': 16.18.2
       '@types/react': 18.0.24
       '@types/react-dom': 18.0.8
+      axios: 101.132.132.201+4873/axios/1.1.3
       history: 5.3.0
       nprogress: 0.2.0
       react: 18.2.0
@@ -106,6 +109,7 @@ importers:
       recoil: 101.132.132.201+4873/recoil/0.7.6_biqbaboplfbrettd7655fr4n2y
       recoil-persist: 101.132.132.201+4873/recoil-persist/4.2.0_recoil@0.7.6
       styled-components: 5.3.6_biqbaboplfbrettd7655fr4n2y
+      swr: 101.132.132.201+4873/swr/1.3.0_react@18.2.0
       typescript: 4.8.4
     devDependencies:
       '@craco/craco': 6.4.5_afcbirbjvsn35adqssggswow7a
@@ -5285,15 +5289,6 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /follow-redirects/1.15.2:
-    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -5330,14 +5325,6 @@ packages:
       tapable: 1.1.3
       typescript: 4.8.4
       webpack: 5.74.0
-
-  /form-data/3.0.1:
-    resolution: {integrity: sha1-69U3kbeDVqma+aMA1CgsTV65dV8=}
-    engines: {node: '>= 6'}
-    dependencies:
-      asynckit: 0.4.0
-      combined-stream: 1.0.8
-      mime-types: 2.1.35
 
   /forwarded/0.2.0:
     resolution: {integrity: sha1-ImmTZCiq1MFcfr6XeahL8LKoGBE=}
@@ -5738,7 +5725,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2
+      follow-redirects: 101.132.132.201+4873/follow-redirects/1.15.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -6666,7 +6653,7 @@ packages:
       decimal.js: 10.4.2
       domexception: 2.0.1
       escodegen: 2.0.0
-      form-data: 3.0.1
+      form-data: 101.132.132.201+4873/form-data/3.0.1
       html-encoding-sniffer: 2.0.1
       http-proxy-agent: 4.0.1
       https-proxy-agent: 5.0.1
@@ -10618,6 +10605,40 @@ packages:
     resolution: {integrity: sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=}
     engines: {node: '>=10'}
 
+  101.132.132.201+4873/asynckit/0.4.0:
+    resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/asynckit/-/asynckit-0.4.0.tgz}
+    name: asynckit
+    version: 0.4.0
+    dev: false
+
+  101.132.132.201+4873/axios/1.1.3:
+    resolution: {integrity: sha512-00tXVRwKx/FZr/IDVFt4C+f9FYairX517WoGCL6dpOntqLkZofjhu43F/Xl44UOpqa+9sLFDrG/XAnFsUYgkDA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/axios/-/axios-1.1.3.tgz}
+    name: axios
+    version: 1.1.3
+    dependencies:
+      follow-redirects: 101.132.132.201+4873/follow-redirects/1.15.2
+      form-data: 101.132.132.201+4873/form-data/4.0.0
+      proxy-from-env: 101.132.132.201+4873/proxy-from-env/1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  101.132.132.201+4873/combined-stream/1.0.8:
+    resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/combined-stream/-/combined-stream-1.0.8.tgz}
+    name: combined-stream
+    version: 1.0.8
+    engines: {node: '>= 0.8'}
+    dependencies:
+      delayed-stream: 101.132.132.201+4873/delayed-stream/1.0.0
+    dev: false
+
+  101.132.132.201+4873/delayed-stream/1.0.0:
+    resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/delayed-stream/-/delayed-stream-1.0.0.tgz}
+    name: delayed-stream
+    version: 1.0.0
+    engines: {node: '>=0.4.0'}
+    dev: false
+
   101.132.132.201+4873/errno/0.1.8:
     resolution: {integrity: sha512-dJ6oBr5SQ1VSd9qkk7ByRgb/1SH4JZjCHSW/mr63/QcXO9zLVxvJ6Oy13nio03rxpSnVDDjFor75SjVeZWPW/A==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/errno/-/errno-0.1.8.tgz}
     name: errno
@@ -10628,6 +10649,38 @@ packages:
       prr: 1.0.1
     dev: true
     optional: true
+
+  101.132.132.201+4873/follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/follow-redirects/-/follow-redirects-1.15.2.tgz}
+    name: follow-redirects
+    version: 1.15.2
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
+  101.132.132.201+4873/form-data/3.0.1:
+    resolution: {integrity: sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/form-data/-/form-data-3.0.1.tgz}
+    name: form-data
+    version: 3.0.1
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+
+  101.132.132.201+4873/form-data/4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/form-data/-/form-data-4.0.0.tgz}
+    name: form-data
+    version: 4.0.0
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 101.132.132.201+4873/asynckit/0.4.0
+      combined-stream: 101.132.132.201+4873/combined-stream/1.0.8
+      mime-types: 101.132.132.201+4873/mime-types/2.1.35
+    dev: false
 
   101.132.132.201+4873/fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/fsevents/-/fsevents-2.3.2.tgz}
@@ -10679,6 +10732,22 @@ packages:
     dependencies:
       semver: 6.3.0
 
+  101.132.132.201+4873/mime-db/1.52.0:
+    resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/mime-db/-/mime-db-1.52.0.tgz}
+    name: mime-db
+    version: 1.52.0
+    engines: {node: '>= 0.6'}
+    dev: false
+
+  101.132.132.201+4873/mime-types/2.1.35:
+    resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/mime-types/-/mime-types-2.1.35.tgz}
+    name: mime-types
+    version: 2.1.35
+    engines: {node: '>= 0.6'}
+    dependencies:
+      mime-db: 101.132.132.201+4873/mime-db/1.52.0
+    dev: false
+
   101.132.132.201+4873/mime/1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/mime/-/mime-1.6.0.tgz}
     name: mime
@@ -10701,6 +10770,12 @@ packages:
       - supports-color
     dev: true
     optional: true
+
+  101.132.132.201+4873/proxy-from-env/1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/proxy-from-env/-/proxy-from-env-1.1.0.tgz}
+    name: proxy-from-env
+    version: 1.1.0
+    dev: false
 
   101.132.132.201+4873/recoil-persist/4.2.0_recoil@0.7.6:
     resolution: {integrity: sha512-MHVfML9GxJP3RpkKR4F5rp7DtvzIvjWhowtMao/b7h2k4afMio/4sMAdUtltIrDaeVegH0Iga8Sx5XQ3oD7CzA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/recoil-persist/-/recoil-persist-4.2.0.tgz}
@@ -10752,3 +10827,14 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       whatwg-url: 7.1.0
+
+  101.132.132.201+4873/swr/1.3.0_react@18.2.0:
+    resolution: {integrity: sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/swr/-/swr-1.3.0.tgz}
+    id: 101.132.132.201+4873/swr/1.3.0
+    name: swr
+    version: 1.3.0
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false

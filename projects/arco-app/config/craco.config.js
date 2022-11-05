@@ -55,6 +55,14 @@ module.exports = {
     }
   ],
   devServer: {
-    port: 8000
+    port: 8000,
+    proxy: {
+      '/api-kernel-portal': {
+        target: 'https://www.geeba.com',
+        changeOrigin: true,
+        secure: false,
+        xfwd: false
+      }
+    }
   }
 }

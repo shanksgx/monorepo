@@ -9,6 +9,8 @@ import {
 import { useSearchParams } from 'react-router-dom'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { listsState, lengthState } from '@/models/useDataTestModel'
+import useSWR from 'swr'
+import { Api, fetcher } from '@/services/user'
 
 const { Title, Text } = Typography
 
@@ -17,12 +19,20 @@ const Recoil: React.FC = () => {
   const length = useRecoilValue(lengthState)
   const [testState, setTestState] = useRecoilState(listsState)
   const [input, setInput] = useState<string>('')
+  // 接口请求
+  const { data, error } = useSWR({ url: Api.testHome, data: 'test' }, fetcher, {
+    suspense: true
+  })
 
   const add = () => {
     setTestState([input, ...testState])
     setInput('')
   }
 
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  // 渲染数据
   return (
     <>
       <Title heading={5}>{search.get('to')}.</Title>
