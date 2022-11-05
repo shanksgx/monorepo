@@ -47,7 +47,8 @@ const About: React.FC = () => {
       <Divider
         style={{
           borderBottomWidth: 2,
-          borderBottomStyle: 'dotted'
+          borderBottomStyle: 'dotted',
+          borderColor: '#181818'
         }}
       />
       <Typography.Paragraph copyable code>
