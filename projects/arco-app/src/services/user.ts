@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 type Idata = {
   url: string
@@ -10,7 +10,7 @@ export enum Api {
 }
 
 export const fetcher = async ({ url, data }: Idata) => {
-  // console.log('test:', data)
+  console.log('test:', url, data)
   // const res = await axios.get(url)
   // console.log(res)
   // if (res.data.code !== '0000') {
