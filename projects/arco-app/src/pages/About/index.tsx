@@ -3,12 +3,14 @@ import { Typography, Divider } from '@arco-design/web-react'
 import NProgress from 'nprogress'
 import { ScrollBar, CustomButton } from 'react-arco-components'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 const { Title } = Typography
 
 const About: React.FC = () => {
   const [status, setStatus] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
+  const navgate = useNavigate()
 
   useEffect(() => {
     NProgress.start()
@@ -22,6 +24,7 @@ const About: React.FC = () => {
   const testIcon = () => {
     setLoading(true)
     setTimeout(() => {
+      navgate(`/recoil?to=recoilComponent`)
       setLoading(false)
     }, 2000)
   }
@@ -37,7 +40,7 @@ const About: React.FC = () => {
       <CustomButton
         type="primary"
         size={'large'}
-        customLoading={loading}
+        customloading={loading ? 1 : 0}
         text={'Hello, CustomButton'}
         onClick={testIcon}
       />
