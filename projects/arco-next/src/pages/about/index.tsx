@@ -1,10 +1,12 @@
-import { Header } from 'components'
+import { Header } from '@/components'
+import { Typography } from '@arco-design/web-react'
+const { Title } = Typography
 
 export default function About() {
   return (
     <>
       <Header title={'hello goduer about'} />
-      <div>Welcome to next.js!</div>
+      <Title heading={5}>Welcome to next.js! About</Title>
     </>
   )
 }
