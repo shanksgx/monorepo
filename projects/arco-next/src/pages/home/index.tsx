@@ -43,7 +43,7 @@ export default function Home() {
             <Logo style={{ width: '32px', height: '32px' }} />
             {` Welcome to next.js!`}
           </Title>
-          <Link href="/about">
+          <Link href="/about?name=golden">
             <Paragraph>about</Paragraph>
           </Link>
           <Divider
