@@ -1,0 +1,5 @@
+/public
+/out/*
+/.next/*
+.stylelintrc.js
+.prettierrc.js
