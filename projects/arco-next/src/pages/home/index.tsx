@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Header } from '@/components'
 import { Layout, Divider, Button, Typography } from '@arco-design/web-react'
-import { IconBulb } from '@arco-design/web-react/icon'
+import { IconSun, IconMoon } from '@arco-design/web-react/icon'
 import Link from 'next/link'
+import Logo from '@/assets/logo.svg'
 
 const LayHeader = Layout.Header
 const Footer = Layout.Footer
@@ -10,7 +11,7 @@ const Content = Layout.Content
 const { Title, Paragraph } = Typography
 
 export default function Home() {
-  const [status, setStatus] = useState<boolean>(false)
+  const [status, setStatus] = useState<boolean>(true)
 
   const testBtn = () => {
     setStatus(!status)
@@ -22,17 +23,26 @@ export default function Home() {
   return (
     <>
       <Header title={'hello goduer'} description={'goduer is a coding!'} />
-      <Layout style={{ height: '100vh' }}>
+      <Layout
+        style={{
+          width: '750px',
+          height: '100vh',
+          margin: '0 auto'
+        }}
+      >
         <LayHeader>
           <Button
-            icon={<IconBulb />}
+            icon={status ? <IconSun /> : <IconMoon />}
             type="primary"
             shape="circle"
             onClick={testBtn}
           />
         </LayHeader>
         <Content>
-          <Title heading={5}>Welcome to next.js!</Title>
+          <Title heading={1}>
+            <Logo style={{ width: '32px', height: '32px' }} />
+            {` Welcome to next.js!`}
+          </Title>
           <Link href="/about">
             <Paragraph>about</Paragraph>
           </Link>
@@ -75,11 +85,13 @@ export default function Home() {
         .arco-layout-footer {
           height: 64px;
           background-color: var(--color-primary-light-1);
+          padding: 16px 32px;
         }
 
         .arco-layout-content {
           background-color: var(--color-primary-light-1);
           color: var(--color-primary-6);
+          padding: 16px 32px;
         }
       `}</style>
     </>
