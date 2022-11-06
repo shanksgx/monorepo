@@ -138,8 +138,24 @@ importers:
       stylelint-order: 5.0.0_stylelint@14.14.0
       webpackbar: 5.0.2
 
+  projects/arco-next:
+    specifiers:
+      next: 13.0.2
+      prettier: ^2.7.1
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      typescript: ^4.8.4
+    dependencies:
+      next: 101.132.132.201+4873/next/13.0.2_biqbaboplfbrettd7655fr4n2y
+      react: 101.132.132.201+4873/react/18.2.0
+      react-dom: 101.132.132.201+4873/react-dom/18.2.0_react@18.2.0
+      typescript: 101.132.132.201+4873/typescript/4.8.4
+    devDependencies:
+      prettier: 101.132.132.201+4873/prettier/2.7.1
+
   projects/next-app:
     specifiers:
+      '@arco-design/web-react': ^2.41.0
       '@types/node': ^16.18.2
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.8
@@ -151,6 +167,7 @@ importers:
       react-dom: ^18.2.0
       typescript: 4.8.4
     dependencies:
+      '@arco-design/web-react': 101.132.132.201+4873/@arco-design/web-react/2.41.0_2zx2umvpluuhvlq44va5bta2da
       '@types/node': 101.132.132.201+4873/@types/node/16.18.2
       '@types/react': 101.132.132.201+4873/@types/react/18.0.25
       '@types/react-dom': 101.132.132.201+4873/@types/react-dom/18.0.8
@@ -10630,6 +10647,42 @@ packages:
     resolution: {integrity: sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=}
     engines: {node: '>=10'}
 
+  101.132.132.201+4873/@arco-design/color/0.4.0:
+    resolution: {integrity: sha512-s7p9MSwJgHeL8DwcATaXvWT3m2SigKpxx4JA1BGPHL4gfvaQsmQfrLBDpjOJFJuJ2jG2dMt3R3P8Pm9E65q18g==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/@arco-design%2fcolor/-/color-0.4.0.tgz}
+    name: '@arco-design/color'
+    version: 0.4.0
+    dependencies:
+      color: 101.132.132.201+4873/color/3.2.1
+    dev: false
+
+  101.132.132.201+4873/@arco-design/web-react/2.41.0_2zx2umvpluuhvlq44va5bta2da:
+    resolution: {integrity: sha512-9ev1bOoiMSSB8PxgDz4JHhBfRPkYA1iIXQpUTAXWIJ4gyBz80pFdSlWmdisukK2glL0ixEgANjgoSDB3QkqQDg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/@arco-design%2fweb-react/-/web-react-2.41.0.tgz}
+    id: 101.132.132.201+4873/@arco-design/web-react/2.41.0
+    name: '@arco-design/web-react'
+    version: 2.41.0
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@arco-design/color': 101.132.132.201+4873/@arco-design/color/0.4.0
+      '@babel/runtime': 101.132.132.201+4873/@babel/runtime/7.20.0
+      b-tween: 101.132.132.201+4873/b-tween/0.3.3
+      b-validate: 101.132.132.201+4873/b-validate/1.4.3
+      compute-scroll-into-view: 101.132.132.201+4873/compute-scroll-into-view/1.0.17
+      dayjs: 101.132.132.201+4873/dayjs/1.11.6
+      lodash: 101.132.132.201+4873/lodash/4.17.21
+      number-precision: 101.132.132.201+4873/number-precision/1.6.0
+      react: 101.132.132.201+4873/react/18.2.0
+      react-dom: 101.132.132.201+4873/react-dom/18.2.0_react@18.2.0
+      react-focus-lock: 101.132.132.201+4873/react-focus-lock/2.9.1_fan5qbzahqtxlm5dzefqlqx5ia
+      react-transition-group: 101.132.132.201+4873/react-transition-group/4.4.5_biqbaboplfbrettd7655fr4n2y
+      resize-observer-polyfill: 101.132.132.201+4873/resize-observer-polyfill/1.5.1
+      scroll-into-view-if-needed: 101.132.132.201+4873/scroll-into-view-if-needed/2.2.20
+      shallowequal: 101.132.132.201+4873/shallowequal/1.1.0
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: false
+
   101.132.132.201+4873/@babel/runtime-corejs3/7.20.0:
     resolution: {integrity: sha512-v1JH7PeAAGBEyTQM9TqojVl+b20zXtesFKCJHu50xMxZKD1fX0TKaKHPsZfFkXfs7D1M9M6Eeqg1FkJ3a0x2dA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/@babel%2fruntime-corejs3/-/runtime-corejs3-7.20.0.tgz}
     name: '@babel/runtime-corejs3'
@@ -11155,6 +11208,18 @@ packages:
     version: 2.2.0
     dev: false
 
+  101.132.132.201+4873/b-tween/0.3.3:
+    resolution: {integrity: sha512-oEHegcRpA7fAuc9KC4nktucuZn2aS8htymCPcP3qkEGPqiBH+GfqtqoG2l7LxHngg6O0HFM7hOeOYExl1Oz4ZA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/b-tween/-/b-tween-0.3.3.tgz}
+    name: b-tween
+    version: 0.3.3
+    dev: false
+
+  101.132.132.201+4873/b-validate/1.4.3:
+    resolution: {integrity: sha512-du2f0NOvfG7DwNLMmsRT+F/7VOeZfClOkxQN60JZFcLq0FwRC/+96HqpFUnFu6dBqNeyZnw2cl/0ydtCLnPNEg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/b-validate/-/b-validate-1.4.3.tgz}
+    name: b-validate
+    version: 1.4.3
+    dev: false
+
   101.132.132.201+4873/balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/balanced-match/-/balanced-match-1.0.2.tgz}
     name: balanced-match
@@ -11217,6 +11282,14 @@ packages:
     version: 0.0.1
     dev: false
 
+  101.132.132.201+4873/color-convert/1.9.3:
+    resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/color-convert/-/color-convert-1.9.3.tgz}
+    name: color-convert
+    version: 1.9.3
+    dependencies:
+      color-name: 101.132.132.201+4873/color-name/1.1.3
+    dev: false
+
   101.132.132.201+4873/color-convert/2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/color-convert/-/color-convert-2.0.1.tgz}
     name: color-convert
@@ -11226,10 +11299,34 @@ packages:
       color-name: 101.132.132.201+4873/color-name/1.1.4
     dev: false
 
+  101.132.132.201+4873/color-name/1.1.3:
+    resolution: {integrity: sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/color-name/-/color-name-1.1.3.tgz}
+    name: color-name
+    version: 1.1.3
+    dev: false
+
   101.132.132.201+4873/color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/color-name/-/color-name-1.1.4.tgz}
     name: color-name
     version: 1.1.4
+    dev: false
+
+  101.132.132.201+4873/color-string/1.9.1:
+    resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/color-string/-/color-string-1.9.1.tgz}
+    name: color-string
+    version: 1.9.1
+    dependencies:
+      color-name: 101.132.132.201+4873/color-name/1.1.4
+      simple-swizzle: 101.132.132.201+4873/simple-swizzle/0.2.2
+    dev: false
+
+  101.132.132.201+4873/color/3.2.1:
+    resolution: {integrity: sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/color/-/color-3.2.1.tgz}
+    name: color
+    version: 3.2.1
+    dependencies:
+      color-convert: 101.132.132.201+4873/color-convert/1.9.3
+      color-string: 101.132.132.201+4873/color-string/1.9.1
     dev: false
 
   101.132.132.201+4873/combined-stream/1.0.8:
@@ -11239,6 +11336,18 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 101.132.132.201+4873/delayed-stream/1.0.0
+    dev: false
+
+  101.132.132.201+4873/compute-scroll-into-view/1.0.11:
+    resolution: {integrity: sha512-uUnglJowSe0IPmWOdDtrlHXof5CTIJitfJEyITHBW6zDVOGu9Pjk5puaLM73SLcwak0L4hEjO7Td88/a6P5i7A==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/compute-scroll-into-view/-/compute-scroll-into-view-1.0.11.tgz}
+    name: compute-scroll-into-view
+    version: 1.0.11
+    dev: false
+
+  101.132.132.201+4873/compute-scroll-into-view/1.0.17:
+    resolution: {integrity: sha512-j4dx+Fb0URmzbwwMUrhqWM2BEWHdFGx+qZ9qqASHRPqvTYdqvWnHg0H1hIbcyLnvgnoNAVMlwkepyqM3DaIFUg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/compute-scroll-into-view/-/compute-scroll-into-view-1.0.17.tgz}
+    name: compute-scroll-into-view
+    version: 1.0.17
     dev: false
 
   101.132.132.201+4873/concat-map/0.0.1:
@@ -11275,6 +11384,12 @@ packages:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz}
     name: damerau-levenshtein
     version: 1.0.8
+    dev: false
+
+  101.132.132.201+4873/dayjs/1.11.6:
+    resolution: {integrity: sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/dayjs/-/dayjs-1.11.6.tgz}
+    name: dayjs
+    version: 1.11.6
     dev: false
 
   101.132.132.201+4873/debug/2.6.9:
@@ -11340,6 +11455,12 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: false
 
+  101.132.132.201+4873/detect-node-es/1.1.0:
+    resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/detect-node-es/-/detect-node-es-1.1.0.tgz}
+    name: detect-node-es
+    version: 1.1.0
+    dev: false
+
   101.132.132.201+4873/dir-glob/3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/dir-glob/-/dir-glob-3.0.1.tgz}
     name: dir-glob
@@ -11365,6 +11486,15 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 101.132.132.201+4873/esutils/2.0.3
+    dev: false
+
+  101.132.132.201+4873/dom-helpers/5.2.1:
+    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/dom-helpers/-/dom-helpers-5.2.1.tgz}
+    name: dom-helpers
+    version: 5.2.1
+    dependencies:
+      '@babel/runtime': 101.132.132.201+4873/@babel/runtime/7.20.0
+      csstype: 101.132.132.201+4873/csstype/3.1.1
     dev: false
 
   101.132.132.201+4873/emoji-regex/9.2.2:
@@ -11845,6 +11975,15 @@ packages:
     version: 3.2.7
     dev: false
 
+  101.132.132.201+4873/focus-lock/0.11.3:
+    resolution: {integrity: sha512-4n0pYcPTa/uI7Q66BZna61nRT7lDhnuJ9PJr6wiDjx4uStg491ks41y7uOG+s0umaaa+hulNKSldU9aTg9/yVg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/focus-lock/-/focus-lock-0.11.3.tgz}
+    name: focus-lock
+    version: 0.11.3
+    engines: {node: '>=10'}
+    dependencies:
+      tslib: 101.132.132.201+4873/tslib/2.4.0
+    dev: false
+
   101.132.132.201+4873/follow-redirects/1.15.2:
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/follow-redirects/-/follow-redirects-1.15.2.tgz}
     name: follow-redirects
@@ -12126,6 +12265,12 @@ packages:
       side-channel: 101.132.132.201+4873/side-channel/1.0.4
     dev: false
 
+  101.132.132.201+4873/is-arrayish/0.3.2:
+    resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/is-arrayish/-/is-arrayish-0.3.2.tgz}
+    name: is-arrayish
+    version: 0.3.2
+    dev: false
+
   101.132.132.201+4873/is-bigint/1.0.4:
     resolution: {integrity: sha512-zB9CruMamjym81i2JZ3UMn54PKGsQzsJeo6xvN3HJJ4CAsQNB6iRutp2To77OfCNuoxspsIhzaPoO1zyCEhFOg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/is-bigint/-/is-bigint-1.0.4.tgz}
     name: is-bigint
@@ -12355,6 +12500,12 @@ packages:
     version: 4.6.2
     dev: false
 
+  101.132.132.201+4873/lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/lodash/-/lodash-4.17.21.tgz}
+    name: lodash
+    version: 4.17.21
+    dev: false
+
   101.132.132.201+4873/loose-envify/1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/loose-envify/-/loose-envify-1.4.0.tgz}
     name: loose-envify
@@ -12541,6 +12692,12 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  101.132.132.201+4873/number-precision/1.6.0:
+    resolution: {integrity: sha512-05OLPgbgmnixJw+VvEh18yNPUo3iyp4BEWJcrLu4X9W05KmMifN7Mu5exYvQXqxxeNWhvIF+j3Rij+HmddM/hQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/number-precision/-/number-precision-1.6.0.tgz}
+    name: number-precision
+    version: 1.6.0
     dev: false
 
   101.132.132.201+4873/object-assign/4.1.1:
@@ -12768,6 +12925,18 @@ packages:
     version: 1.2.3
     dev: false
 
+  101.132.132.201+4873/react-clientside-effect/1.2.6_react@18.2.0:
+    resolution: {integrity: sha512-XGGGRQAKY+q25Lz9a/4EPqom7WRjz3z9R2k4jhVKA/puQFH/5Nt27vFZYql4m4NVNdUvX8PS3O7r/Zzm7cjUlg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/react-clientside-effect/-/react-clientside-effect-1.2.6.tgz}
+    id: 101.132.132.201+4873/react-clientside-effect/1.2.6
+    name: react-clientside-effect
+    version: 1.2.6
+    peerDependencies:
+      react: ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 101.132.132.201+4873/@babel/runtime/7.20.0
+      react: 101.132.132.201+4873/react/18.2.0
+    dev: false
+
   101.132.132.201+4873/react-dom/18.2.0_react@18.2.0:
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/react-dom/-/react-dom-18.2.0.tgz}
     id: 101.132.132.201+4873/react-dom/18.2.0
@@ -12781,10 +12950,49 @@ packages:
       scheduler: 101.132.132.201+4873/scheduler/0.23.0
     dev: false
 
+  101.132.132.201+4873/react-focus-lock/2.9.1_fan5qbzahqtxlm5dzefqlqx5ia:
+    resolution: {integrity: sha512-pSWOQrUmiKLkffPO6BpMXN7SNKXMsuOakl652IBuALAu1esk+IcpJyM+ALcYzPTTFz1rD0R54aB9A4HuP5t1Wg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/react-focus-lock/-/react-focus-lock-2.9.1.tgz}
+    id: 101.132.132.201+4873/react-focus-lock/2.9.1
+    name: react-focus-lock
+    version: 2.9.1
+    peerDependencies:
+      '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 101.132.132.201+4873/@babel/runtime/7.20.0
+      '@types/react': 101.132.132.201+4873/@types/react/18.0.25
+      focus-lock: 101.132.132.201+4873/focus-lock/0.11.3
+      prop-types: 101.132.132.201+4873/prop-types/15.8.1
+      react: 101.132.132.201+4873/react/18.2.0
+      react-clientside-effect: 101.132.132.201+4873/react-clientside-effect/1.2.6_react@18.2.0
+      use-callback-ref: 101.132.132.201+4873/use-callback-ref/1.3.0_fan5qbzahqtxlm5dzefqlqx5ia
+      use-sidecar: 101.132.132.201+4873/use-sidecar/1.1.2_fan5qbzahqtxlm5dzefqlqx5ia
+    dev: false
+
   101.132.132.201+4873/react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/react-is/-/react-is-16.13.1.tgz}
     name: react-is
     version: 16.13.1
+    dev: false
+
+  101.132.132.201+4873/react-transition-group/4.4.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/react-transition-group/-/react-transition-group-4.4.5.tgz}
+    id: 101.132.132.201+4873/react-transition-group/4.4.5
+    name: react-transition-group
+    version: 4.4.5
+    peerDependencies:
+      react: '>=16.6.0'
+      react-dom: '>=16.6.0'
+    dependencies:
+      '@babel/runtime': 101.132.132.201+4873/@babel/runtime/7.20.0
+      dom-helpers: 101.132.132.201+4873/dom-helpers/5.2.1
+      loose-envify: 101.132.132.201+4873/loose-envify/1.4.0
+      prop-types: 101.132.132.201+4873/prop-types/15.8.1
+      react: 101.132.132.201+4873/react/18.2.0
+      react-dom: 101.132.132.201+4873/react-dom/18.2.0_react@18.2.0
     dev: false
 
   101.132.132.201+4873/react/18.2.0:
@@ -12849,6 +13057,12 @@ packages:
     name: regexpp
     version: 3.2.0
     engines: {node: '>=8'}
+    dev: false
+
+  101.132.132.201+4873/resize-observer-polyfill/1.5.1:
+    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz}
+    name: resize-observer-polyfill
+    version: 1.5.1
     dev: false
 
   101.132.132.201+4873/resolve-from/4.0.0:
@@ -12922,6 +13136,14 @@ packages:
       loose-envify: 101.132.132.201+4873/loose-envify/1.4.0
     dev: false
 
+  101.132.132.201+4873/scroll-into-view-if-needed/2.2.20:
+    resolution: {integrity: sha512-P9kYMrhi9f6dvWwTGpO5I3HgjSU/8Mts7xL3lkoH5xlewK7O9Obdc5WmMCzppln7bCVGNmf3qfoZXrpCeyNJXw==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.20.tgz}
+    name: scroll-into-view-if-needed
+    version: 2.2.20
+    dependencies:
+      compute-scroll-into-view: 101.132.132.201+4873/compute-scroll-into-view/1.0.11
+    dev: false
+
   101.132.132.201+4873/semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/semver/-/semver-6.3.0.tgz}
     name: semver
@@ -12937,6 +13159,12 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 101.132.132.201+4873/lru-cache/6.0.0
+    dev: false
+
+  101.132.132.201+4873/shallowequal/1.1.0:
+    resolution: {integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/shallowequal/-/shallowequal-1.1.0.tgz}
+    name: shallowequal
+    version: 1.1.0
     dev: false
 
   101.132.132.201+4873/shebang-command/2.0.0:
@@ -12963,6 +13191,14 @@ packages:
       call-bind: 101.132.132.201+4873/call-bind/1.0.2
       get-intrinsic: 101.132.132.201+4873/get-intrinsic/1.1.3
       object-inspect: 101.132.132.201+4873/object-inspect/1.12.2
+    dev: false
+
+  101.132.132.201+4873/simple-swizzle/0.2.2:
+    resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/simple-swizzle/-/simple-swizzle-0.2.2.tgz}
+    name: simple-swizzle
+    version: 0.2.2
+    dependencies:
+      is-arrayish: 101.132.132.201+4873/is-arrayish/0.3.2
     dev: false
 
   101.132.132.201+4873/slash/3.0.0:
@@ -13196,6 +13432,43 @@ packages:
     version: 4.4.1
     dependencies:
       punycode: 101.132.132.201+4873/punycode/2.1.1
+    dev: false
+
+  101.132.132.201+4873/use-callback-ref/1.3.0_fan5qbzahqtxlm5dzefqlqx5ia:
+    resolution: {integrity: sha512-3FT9PRuRdbB9HfXhEq35u4oZkvpJ5kuYbpqhCfmiZyReuRgpnhDlbr2ZEnnuS0RrJAPn6l23xjFg9kpDM+Ms7w==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/use-callback-ref/-/use-callback-ref-1.3.0.tgz}
+    id: 101.132.132.201+4873/use-callback-ref/1.3.0
+    name: use-callback-ref
+    version: 1.3.0
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 101.132.132.201+4873/@types/react/18.0.25
+      react: 101.132.132.201+4873/react/18.2.0
+      tslib: 101.132.132.201+4873/tslib/2.4.0
+    dev: false
+
+  101.132.132.201+4873/use-sidecar/1.1.2_fan5qbzahqtxlm5dzefqlqx5ia:
+    resolution: {integrity: sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/use-sidecar/-/use-sidecar-1.1.2.tgz}
+    id: 101.132.132.201+4873/use-sidecar/1.1.2
+    name: use-sidecar
+    version: 1.1.2
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@types/react': ^16.9.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 101.132.132.201+4873/@types/react/18.0.25
+      detect-node-es: 101.132.132.201+4873/detect-node-es/1.1.0
+      react: 101.132.132.201+4873/react/18.2.0
+      tslib: 101.132.132.201+4873/tslib/2.4.0
     dev: false
 
   101.132.132.201+4873/use-sync-external-store/1.2.0_react@18.2.0:
