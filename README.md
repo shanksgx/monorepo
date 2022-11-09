@@ -1,5 +1,7 @@
 # Monorepos for React
 
+[![CI/CD](https://github.com/shanksgx/monorepos/actions/workflows/azure-webapps-node.yml/badge.svg)](https://github.com/shanksgx/monorepos/actions/workflows/azure-webapps-node.yml)
+
 This is an arco ui, monorepos, demo based on react. Based on this, we can develop the PC and H5 projects.The project will add cutting-edge front-end web technology according to personal inspiration.
 
 In the project directory, you can run:
