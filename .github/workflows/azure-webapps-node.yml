@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: pnpm i -r
-      - run: pnpm deploy
+      - run: cd ./project/arco-app
+      - run: npm install
+      - run: cd /
+      - run: npm run deploy
       - run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn deploy -- -u "github-actions-bot <support+actions@github.com>"
