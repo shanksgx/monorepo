@@ -6,15 +6,15 @@ import {
   FormInstance,
   Grid,
 } from "@arco-design/web-react";
-import Component from "./CustomerComponents";
+import { CustomerComponents as Component } from "./CustomerComponents";
 
-type componentType = "input" | "select" | "customer";
+export type componentType = "input" | "select" | "customer";
 
 export type objType = {
   [key: string]: any;
 };
 
-export type Options = objType & {
+type Options = objType & {
   label: string;
   value: string | number;
   disabled?: boolean;
@@ -38,7 +38,7 @@ export interface FormSchema {
 interface Ischamas extends FormProps {
   form: FormInstance<any, any, string | number | symbol>;
   rowSpacing: number;
-  schamas: FormSchema[];
+  schemas: FormSchema[];
 }
 
 const FormItem = Form.Item;
@@ -46,24 +46,28 @@ const Row = Grid.Row;
 const Col = Grid.Col;
 
 const SchamasForm: React.FC<Ischamas> = (props) => {
-  const { schamas, form, rowSpacing, ...otherProps } = props;
+  const { schemas, form, rowSpacing, ...otherProps } = props;
 
   return (
-    <Form form={form} {...otherProps}>
+    <Form form={form} autoComplete="off" {...otherProps}>
       <Row gutter={rowSpacing}>
-        {schamas &&
-          schamas.length > 0 &&
-          schamas.map((schamas) => (
-            <Col span={schamas.colSpan} offset={schamas.offset}>
-              <FormItem {...schamas.schemasItem}>
+        {schemas &&
+          schemas.length > 0 &&
+          schemas.map((schemas) => (
+            <Col
+              span={schemas.colSpan}
+              offset={schemas.offset}
+              key={schemas?.schemasItem?.field as string}
+            >
+              <FormItem {...schemas.schemasItem}>
                 {useMemo(
                   () => (
                     <Component
-                      component={schamas.component}
-                      componentConfig={schamas.componentConfig}
+                      component={schemas.component}
+                      componentConfig={schemas.componentConfig}
                     />
                   ),
-                  [schamas.component]
+                  [schemas.component]
                 )}
               </FormItem>
             </Col>

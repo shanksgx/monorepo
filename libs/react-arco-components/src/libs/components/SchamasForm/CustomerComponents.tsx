@@ -1,19 +1,18 @@
-import type { FormSchema } from "../SchamasForm";
-import { InputItem, SelectItem } from "./Item";
+import type { IcomponentConfig, componentType } from ".";
+import { InputItem, SelectItem } from "./RenderItem";
 
-const CustomerComponents = (
-  props: Pick<FormSchema, "component" | "componentConfig">
-): JSX.Element => {
-  const { component, componentConfig } = props;
-
+export const CustomerComponents = (props: {
+  component: componentType;
+  componentConfig: IcomponentConfig;
+  onChange?: (e: any) => void;
+}): JSX.Element => {
+  const { component, componentConfig, onChange } = props;
   switch (component) {
     case "input":
-      return InputItem(componentConfig);
+      return InputItem({ onChange, ...componentConfig });
     case "select":
-      return SelectItem(componentConfig);
+      return SelectItem({ onChange, ...componentConfig });
     default:
       return <></>;
   }
 };
-
-export default CustomerComponents;

@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import { ScrollBar, CustomButton } from "./libs/main";
-import { Typography, Divider } from "@arco-design/web-react";
+import { Typography, Divider, Button } from "@arco-design/web-react";
 import styled from "styled-components";
+import { SchamasForm } from "./libs/main";
+import { Form } from "@arco-design/web-react";
+import { schemas } from "./schamas";
 import "./App.less";
 
 const { Title } = Typography;
@@ -10,6 +13,13 @@ const { Title } = Typography;
 function App() {
   const [count, setCount] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
+  const [formData, setFormData] = useState<any>();
+  const [form] = Form.useForm();
+  const name = Form.useWatch("username", form);
+  //todo 可以做值联动
+  useEffect(() => {
+    console.log(name);
+  }, [name]);
 
   const testIcon = () => {
     setLoading(true);
@@ -64,6 +74,38 @@ function App() {
           </ScrollBox>
         }
       />
+      <Divider
+        style={{
+          borderBottomWidth: 2,
+          borderBottomStyle: "dotted",
+        }}
+      />
+      <SchamasForm
+        form={form}
+        rowSpacing={16}
+        schemas={schemas}
+        labelAlign="left"
+        layout={"vertical"}
+        style={{ textAlign: "left" }}
+      />
+      <Button
+        type={"outline"}
+        onClick={async () => {
+          const data = await form.validate();
+          console.log(data);
+          setFormData(data);
+        }}
+      >
+        获取数据
+      </Button>
+      <Divider
+        style={{
+          borderBottomWidth: 2,
+          borderBottomStyle: "dotted",
+        }}
+      />
+      username: {name ? `❤️` : null} | {formData?.username}, adr:{" "}
+      {formData?.address?.label}
     </div>
   );
 }
