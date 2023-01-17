@@ -175,6 +175,7 @@ importers:
       pretty-quick: ^3.1.2
       query-string: ^6.13.8
       react: ^17.0.2
+      react-arco-components: workspace:^1.0.7
       react-color: ^2.18.1
       react-dom: ^17.0.2
       react-redux: ^7.2.6
@@ -204,6 +205,7 @@ importers:
       nprogress: 101.132.132.201+4873/nprogress/0.2.0
       query-string: 101.132.132.201+4873/query-string/6.14.1
       react: 101.132.132.201+4873/react/17.0.2
+      react-arco-components: link:../../libs/react-arco-components
       react-color: 101.132.132.201+4873/react-color/2.19.3_react@17.0.2
       react-dom: 101.132.132.201+4873/react-dom/17.0.2_react@17.0.2
       react-redux: 101.132.132.201+4873/react-redux/7.2.9_sfoxds7t5ydpegc3knd667wn6m
@@ -19876,7 +19878,7 @@ packages:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 101.132.132.201+4873/tslib/1.14.1
-      typescript: 4.8.4
+      typescript: 101.132.132.201+4873/typescript/4.8.4
 
   101.132.132.201+4873/turf-jsts/1.2.3:
     resolution: {integrity: sha512-Ja03QIJlPuHt4IQ2FfGex4F4JAr8m3jpaHbFbQrgwr7s7L6U8ocrHiF3J1+wf9jzhGKxvDeaCAnGDot8OjGFyA==, registry: http://npm.goduer.com/, tarball: http://101.132.132.201:4873/turf-jsts/-/turf-jsts-1.2.3.tgz}

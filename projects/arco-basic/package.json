@@ -1,5 +1,5 @@
 {
-  "name": "arco-design-pro",
+  "name": "arco-basic",
   "version": "1.0.0",
   "description": "Arco Design Pro",
   "scripts": {
@@ -30,6 +30,7 @@
     "nprogress": "^0.2.0",
     "query-string": "^6.13.8",
     "react": "^17.0.2",
+    "react-arco-components": "workspace:^1.0.7",
     "react-color": "^2.18.1",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",

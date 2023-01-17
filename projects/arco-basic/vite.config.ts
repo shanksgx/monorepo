@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgrPlugin from '@arco-plugins/vite-plugin-svgr';
