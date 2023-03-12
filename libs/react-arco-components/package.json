@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shanksgx/monorepos.git"
+    "url": "git+https://github.com/shanksgx/monorepo.git"
   },
   "bugs": {
-    "url": "https://github.com/shanksgx/monorepos/issues"
+    "url": "https://github.com/shanksgx/monorepo/issues"
   },
-  "homepage": "https://shanksgx.github.io/monorepos/",
+  "homepage": "https://shanksgx.github.io/monorepo/",
   "files": [
     "dist"
   ],
