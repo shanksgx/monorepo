@@ -3,7 +3,7 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "药江君",
+        "navigationBarTitleText": "标题",
         "navigationBarBackgroundColor": "#40BA9E",
         "navigationBarTextStyle": "white"
       }
