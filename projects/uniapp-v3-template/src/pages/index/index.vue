@@ -2,7 +2,7 @@
   <view class="content">
     <u-alert
       style="width: 100%"
-      title="你好，goduer！"
+      title="Hello World!"
       type="success"
       :fontSize="26"
       :center="true"
@@ -16,18 +16,23 @@
     </view>
     <u-toast ref="utoast"></u-toast>
     <u-notify message="Hi uview-plus" ref="notify"></u-notify>
+    <view class="goduer-p-2">
+      <uni-rate v-model="rateValue" @change="onChange" />
+    </view>
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-const title = ref<string>('Hello World')
+
+const title = ref<string>('Shanks.Time')
 const utoast = ref<any>(null)
 const notify = ref<any>(null)
+const rateValue = ref<number>(0)
 
 const goSuccess = () => {
   utoast.value.show({
-    type: 'error',
+    type: 'warning',
     icon: false,
     title: '失败主题',
     message: '一弦一柱思华年',
@@ -35,12 +40,16 @@ const goSuccess = () => {
   })
   notify.value.show({
     top: -1,
-    type: 'error',
+    type: 'success',
     message: 'Hi uview-plus for uniapp',
     duration: 1000 * 3,
     fontSize: 30,
     safeAreaInsetTop: false
   })
+}
+
+const onChange = (e: any) => {
+  console.log('rate发生改变:' + e.value)
 }
 </script>
 
