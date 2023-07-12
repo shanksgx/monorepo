@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Typography, Divider } from '@arco-design/web-react'
+import { IconSync } from '@arco-design/web-react/icon'
 import NProgress from 'nprogress'
 import { ScrollBar, CustomButton } from 'react-arco-components'
 import styled from 'styled-components'
@@ -41,6 +42,7 @@ const About: React.FC = () => {
         type="primary"
         size={'large'}
         customloading={loading ? 1 : 0}
+        customIcon={<IconSync spin />}
         text={'Hello, CustomButton'}
         onClick={testIcon}
       />

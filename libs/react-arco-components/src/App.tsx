@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import { ScrollBar, CustomButton } from "./libs/main";
 import { Typography, Divider, Button } from "@arco-design/web-react";
+import { IconSync } from "@arco-design/web-react/icon";
 import styled from "styled-components";
 import { SchamasForm } from "./libs/main";
 import { Form } from "@arco-design/web-react";
@@ -54,6 +55,7 @@ function App() {
         type="primary"
         size={"large"}
         customloading={loading ? 1 : 0}
+        customIcon={<IconSync spin />}
         text={"Hello, CustomButton"}
         onClick={testIcon}
       />
