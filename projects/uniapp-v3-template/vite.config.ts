@@ -7,6 +7,14 @@ import Unocss from 'unocss/vite'
 export default defineConfig(() =>{
   return {
     transpileDependencies: ['uview-plus'],
-    plugins: [uni(), commonjs(), Unocss()]
+    plugins: [uni(), commonjs(), Unocss()],
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    }
   }
 })
